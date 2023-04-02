@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct BulletinApp: App {
+    @StateObject private var model = BulletinModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(model: model)
         }
     }
 }
