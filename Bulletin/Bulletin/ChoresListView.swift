@@ -13,7 +13,7 @@ struct ChoresListView: View {
     var body: some View {
         List {
             ForEach(model.chores) { chore in
-                ChoreRowView()
+                ChoreRowView(chore: chore)
             }
         }
     }

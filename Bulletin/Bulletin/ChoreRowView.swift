@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ChoreRowView: View {
+    let chore: Chore
+    
     var body: some View {
         HStack {
-            Text("Chore")
+            Text(chore.name)
             Spacer()
         }
         .padding()
@@ -19,6 +21,6 @@ struct ChoreRowView: View {
 
 struct ChoreRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoreRowView()
+        ChoreRowView(chore: Chore(name: "Trash"))
     }
 }
