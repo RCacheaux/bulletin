@@ -13,7 +13,11 @@ struct ChoresListView: View {
     var body: some View {
         List {
             ForEach(model.chores) { chore in
-                ChoreRowView(chore: chore)
+                NavigationLink {
+                    ChoreView(model: model, chore: chore)
+                } label: {
+                    ChoreRowView(chore: chore)
+                }
             }
         }
     }
