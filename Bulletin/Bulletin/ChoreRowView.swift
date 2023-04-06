@@ -15,7 +15,7 @@ struct ChoreRowView: View {
             Text(chore.name)
             Spacer()
         }
-        .padding()
+        .padding([.leading, .trailing])
     }
 }
 
