@@ -19,6 +19,7 @@
 		9F4D920029DEF2DC00E4230B /* ChoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */; };
 		9F4D920229DEF8F500E4230B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D920129DEF8F500E4230B /* SettingsView.swift */; };
 		9F4D920429DEFA8600E4230B /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D920329DEFA8600E4230B /* FamilyView.swift */; };
+		9F4D920629DEFC1900E4230B /* NewFamilyMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D920529DEFC1900E4230B /* NewFamilyMemberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreView.swift; sourceTree = "<group>"; };
 		9F4D920129DEF8F500E4230B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9F4D920329DEFA8600E4230B /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
+		9F4D920529DEFC1900E4230B /* NewFamilyMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFamilyMemberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				9F2D00F529D90515002F9A3E /* BulletinApp.swift */,
 				9F2D00F729D90515002F9A3E /* ContentView.swift */,
+				9F4D920529DEFC1900E4230B /* NewFamilyMemberView.swift */,
 				9F4D920129DEF8F500E4230B /* SettingsView.swift */,
 				9F4D920329DEFA8600E4230B /* FamilyView.swift */,
 				9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */,
@@ -166,6 +169,7 @@
 				9F2D010629D91EDC002F9A3E /* ChoreRowView.swift in Sources */,
 				9F2D010829D91F9C002F9A3E /* Chore.swift in Sources */,
 				9F4D920229DEF8F500E4230B /* SettingsView.swift in Sources */,
+				9F4D920629DEFC1900E4230B /* NewFamilyMemberView.swift in Sources */,
 				9F2D010C29D9E8A9002F9A3E /* NewChoreView.swift in Sources */,
 				9F2D00F829D90515002F9A3E /* ContentView.swift in Sources */,
 				9F2D00F629D90515002F9A3E /* BulletinApp.swift in Sources */,

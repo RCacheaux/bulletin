@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FamilyView: View {
+    @State private var showingNewFamilyMemberSheet = false
+    
     var body: some View {
         NavigationStack {
             List {
@@ -21,12 +23,15 @@ struct FamilyView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        
+                        showingNewFamilyMemberSheet.toggle()
                     }) {
                         Image(systemName: "plus")
                     }
                 }
             }
+        }
+        .sheet(isPresented: $showingNewFamilyMemberSheet) {
+            NewFamilyMemberView()
         }
     }
 }
