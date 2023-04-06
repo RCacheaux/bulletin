@@ -9,25 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var model: BulletinModel
-    @State private var showingSheet = false
+    @State private var showingNewChoreSheet = false
+    @State private var showingSettingsSheet = false
     
     var body: some View {
         NavigationStack {
             ChoresListView(model: model)
                 .navigationTitle("Chores")
                 .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            showingSettingsSheet.toggle()
+                        }) {
+                            Image(systemName: "gearshape")
+                        }
+                    }
                     ToolbarItemGroup(placement: .bottomBar) {
                         Spacer()
                         Button(action: {
-                            showingSheet.toggle()
+                            showingNewChoreSheet.toggle()
                         }) {
                             Image(systemName: "plus")
                         }
                     }
                 }
         }
-        .sheet(isPresented: $showingSheet) {
+        .sheet(isPresented: $showingNewChoreSheet) {
             NewChoreView(model: model)
+        }
+        .sheet(isPresented: $showingSettingsSheet) {
+            SettingsView()
         }
     }
 }
