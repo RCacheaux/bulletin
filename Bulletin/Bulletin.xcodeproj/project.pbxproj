@@ -18,6 +18,7 @@
 		9F2D010E29DA2D98002F9A3E /* BulletinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D010D29DA2D98002F9A3E /* BulletinModel.swift */; };
 		9F4D920029DEF2DC00E4230B /* ChoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */; };
 		9F4D920229DEF8F500E4230B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D920129DEF8F500E4230B /* SettingsView.swift */; };
+		9F4D920429DEFA8600E4230B /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D920329DEFA8600E4230B /* FamilyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		9F2D010D29DA2D98002F9A3E /* BulletinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinModel.swift; sourceTree = "<group>"; };
 		9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreView.swift; sourceTree = "<group>"; };
 		9F4D920129DEF8F500E4230B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9F4D920329DEFA8600E4230B /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				9F2D00F529D90515002F9A3E /* BulletinApp.swift */,
 				9F2D00F729D90515002F9A3E /* ContentView.swift */,
 				9F4D920129DEF8F500E4230B /* SettingsView.swift */,
+				9F4D920329DEFA8600E4230B /* FamilyView.swift */,
 				9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */,
 				9F2D010B29D9E8A9002F9A3E /* NewChoreView.swift */,
 				9F2D00F929D90515002F9A3E /* Assets.xcassets */,
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4D920429DEFA8600E4230B /* FamilyView.swift in Sources */,
 				9F2D010429D91DD3002F9A3E /* ChoresListView.swift in Sources */,
 				9F2D010629D91EDC002F9A3E /* ChoreRowView.swift in Sources */,
 				9F2D010829D91F9C002F9A3E /* Chore.swift in Sources */,

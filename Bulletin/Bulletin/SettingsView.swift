@@ -12,6 +12,11 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationStack {
+            List {
+                NavigationLink("Family") {
+                    
+                }
+            }
             Text("")
                 .navigationTitle("Settings")
                 .navigationBarTitleDisplayMode(.inline)
