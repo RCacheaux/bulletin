@@ -14,7 +14,7 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 NavigationLink("Family") {
-                    
+                    FamilyView()
                 }
             }
             Text("")
