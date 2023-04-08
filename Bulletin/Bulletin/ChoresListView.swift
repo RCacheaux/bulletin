@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ChoresListView: View {
     @ObservedObject var model: BulletinModel
+    @FetchRequest(sortDescriptors: []) var chores: FetchedResults<CDChore>
     
     var body: some View {
         List {
-            ForEach(model.chores) { chore in
+            ForEach(chores) { cdchore in
+                let chore = Chore(name: cdchore.name!)
                 NavigationLink {
                     ChoreView(model: model, chore: chore)
                 } label: {

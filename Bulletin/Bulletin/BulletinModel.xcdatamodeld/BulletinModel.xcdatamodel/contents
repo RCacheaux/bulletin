@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDChore" representedClassName="CDChore" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="asignee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFamilyMember" inverseName="chores" inverseEntity="CDFamilyMember"/>
+    </entity>
+    <entity name="CDFamily" representedClassName="CDFamily" syncable="YES" codeGenerationType="class">
+        <relationship name="members" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFamilyMember" inverseName="family" inverseEntity="CDFamilyMember"/>
+    </entity>
+    <entity name="CDFamilyMember" representedClassName="CDFamilyMember" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="chores" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDChore" inverseName="asignee" inverseEntity="CDChore"/>
+        <relationship name="family" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFamily" inverseName="members" inverseEntity="CDFamily"/>
+    </entity>
+</model>

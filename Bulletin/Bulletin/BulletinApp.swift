@@ -14,6 +14,7 @@ struct BulletinApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(model: model)
+                .environment(\.managedObjectContext, model.container.viewContext)
         }
     }
 }

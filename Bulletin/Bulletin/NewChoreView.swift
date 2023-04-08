@@ -35,6 +35,7 @@ struct NewChoreView: View {
                     Button("Add"){
                         let newChore = Chore(name: name)
                         model.chores.append(newChore)
+                        model.persist(chore: newChore)
                         dismiss()
                     }
                 }
