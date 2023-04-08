@@ -10,7 +10,7 @@ import CoreData
 
 class BulletinModel: ObservableObject {
     let container = NSPersistentContainer(name: "BulletinModel")
-    @Published var chores: [Chore] = []
+    //@Published var chores: [Chore] = []
     
     init() {
         container.loadPersistentStores { description, error in
@@ -24,6 +24,13 @@ class BulletinModel: ObservableObject {
         let moc = container.viewContext
         let cdchore = CDChore(context: moc)
         cdchore.name = chore.name
+        try? moc.save()
+    }
+    
+    func persist(familyMember: FamilyMember) {
+        let moc = container.viewContext
+        let cdFamilyMember = CDFamilyMember(context: moc)
+        cdFamilyMember.name = familyMember.name
         try? moc.save()
     }
 }

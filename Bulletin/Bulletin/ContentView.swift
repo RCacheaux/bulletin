@@ -38,7 +38,7 @@ struct ContentView: View {
             NewChoreView(model: model)
         }
         .sheet(isPresented: $showingSettingsSheet) {
-            SettingsView()
+            SettingsView(model: model)
         }
     }
 }

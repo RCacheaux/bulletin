@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @ObservedObject var model: BulletinModel
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
             List {
                 NavigationLink("Family") {
-                    FamilyView()
+                    FamilyView(model: model)
                 }
             }
             Text("")
@@ -33,7 +34,14 @@ struct SettingsView: View {
 }
 
 struct SettingsView_Previews: PreviewProvider {
+    struct Preview: View {
+        @StateObject private var model = BulletinModel()
+        var body: some View {
+            SettingsView(model: model)
+        }
+    }
+    
     static var previews: some View {
-        SettingsView()
+        Preview()
     }
 }

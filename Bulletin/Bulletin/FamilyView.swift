@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct FamilyView: View {
+    @ObservedObject var model: BulletinModel
     @State private var showingNewFamilyMemberSheet = false
+    @FetchRequest(sortDescriptors: []) var cdFamilyMembers: FetchedResults<CDFamilyMember>
     
     var body: some View {
         NavigationStack {
             List {
-                Text("Mum")
-                Text("Dad")
-                Text("Bingo")
-                Text("Bluey")
+                ForEach(cdFamilyMembers) { cdFamilyMember in
+                    Text(cdFamilyMember.name!)
+                }
             }
             .navigationTitle("Family")
             .navigationBarTitleDisplayMode(.inline)
@@ -31,13 +32,20 @@ struct FamilyView: View {
             }
         }
         .sheet(isPresented: $showingNewFamilyMemberSheet) {
-            NewFamilyMemberView()
+            NewFamilyMemberView(model: model)
         }
     }
 }
 
 struct FamilyView_Previews: PreviewProvider {
+    struct Preview: View {
+        @StateObject private var model = BulletinModel()
+        var body: some View {
+            FamilyView(model: model)
+        }
+    }
+    
     static var previews: some View {
-        FamilyView()
+        Preview()
     }
 }

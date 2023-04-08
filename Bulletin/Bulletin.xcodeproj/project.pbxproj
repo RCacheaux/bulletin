@@ -21,6 +21,7 @@
 		9F4D920429DEFA8600E4230B /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D920329DEFA8600E4230B /* FamilyView.swift */; };
 		9F4D920629DEFC1900E4230B /* NewFamilyMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D920529DEFC1900E4230B /* NewFamilyMemberView.swift */; };
 		9F4D920929E1AF1100E4230B /* BulletinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D920729E1AF1100E4230B /* BulletinModel.xcdatamodeld */; };
+		9F4D924429E1DE2900E4230B /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D924329E1DE2900E4230B /* FamilyMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		9F4D920329DEFA8600E4230B /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
 		9F4D920529DEFC1900E4230B /* NewFamilyMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFamilyMemberView.swift; sourceTree = "<group>"; };
 		9F4D920829E1AF1100E4230B /* BulletinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BulletinModel.xcdatamodel; sourceTree = "<group>"; };
+		9F4D924329E1DE2900E4230B /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				9F2D00F729D90515002F9A3E /* ContentView.swift */,
 				9F4D920729E1AF1100E4230B /* BulletinModel.xcdatamodeld */,
 				9F4D920529DEFC1900E4230B /* NewFamilyMemberView.swift */,
+				9F4D924329E1DE2900E4230B /* FamilyMember.swift */,
 				9F4D920129DEF8F500E4230B /* SettingsView.swift */,
 				9F4D920329DEFA8600E4230B /* FamilyView.swift */,
 				9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */,
@@ -176,6 +179,7 @@
 				9F4D920929E1AF1100E4230B /* BulletinModel.xcdatamodeld in Sources */,
 				9F2D010C29D9E8A9002F9A3E /* NewChoreView.swift in Sources */,
 				9F2D00F829D90515002F9A3E /* ContentView.swift in Sources */,
+				9F4D924429E1DE2900E4230B /* FamilyMember.swift in Sources */,
 				9F2D00F629D90515002F9A3E /* BulletinApp.swift in Sources */,
 				9F4D920029DEF2DC00E4230B /* ChoreView.swift in Sources */,
 				9F2D010E29DA2D98002F9A3E /* BulletinModel.swift in Sources */,
