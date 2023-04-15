@@ -24,6 +24,7 @@
 		9F4D924429E1DE2900E4230B /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D924329E1DE2900E4230B /* FamilyMember.swift */; };
 		9F4D924629EB2B5800E4230B /* CDFamilyMember+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D924529EB2B5800E4230B /* CDFamilyMember+Extensions.swift */; };
 		9F4D924829EB2BC700E4230B /* CDChore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D924729EB2BC700E4230B /* CDChore+Extensions.swift */; };
+		9F4D924C29EB40B200E4230B /* ChoresTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D924B29EB40B200E4230B /* ChoresTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		9F4D924329E1DE2900E4230B /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 		9F4D924529EB2B5800E4230B /* CDFamilyMember+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDFamilyMember+Extensions.swift"; sourceTree = "<group>"; };
 		9F4D924729EB2BC700E4230B /* CDChore+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDChore+Extensions.swift"; sourceTree = "<group>"; };
+		9F4D924B29EB40B200E4230B /* ChoresTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */,
 				9F2D010B29D9E8A9002F9A3E /* NewChoreView.swift */,
 				9F2D010529D91EDC002F9A3E /* ChoreRowView.swift */,
+				9F4D924B29EB40B200E4230B /* ChoresTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				9F2D010429D91DD3002F9A3E /* ChoresListView.swift in Sources */,
 				9F2D010629D91EDC002F9A3E /* ChoreRowView.swift in Sources */,
 				9F2D010829D91F9C002F9A3E /* Chore.swift in Sources */,
+				9F4D924C29EB40B200E4230B /* ChoresTabView.swift in Sources */,
 				9F4D924629EB2B5800E4230B /* CDFamilyMember+Extensions.swift in Sources */,
 				9F4D920229DEF8F500E4230B /* SettingsView.swift in Sources */,
 				9F4D924829EB2BC700E4230B /* CDChore+Extensions.swift in Sources */,
