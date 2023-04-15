@@ -16,6 +16,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Chores", systemImage: "list.bullet.clipboard")   
                 }
+            MealsTabView()
+                .tabItem {
+                    Label("Meals", systemImage: "takeoutbag.and.cup.and.straw")
+                }
         }
     }
 }
