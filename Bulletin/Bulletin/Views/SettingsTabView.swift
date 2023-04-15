@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct SettingsView: View {
+struct SettingsTabView: View {
     @ObservedObject var model: BulletinModel
-    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
@@ -18,17 +17,7 @@ struct SettingsView: View {
                     FamilyView(model: model)
                 }
             }
-            Text("")
-                .navigationTitle("Settings")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Done"){
-                            dismiss()
-                        }
-                    }
-                }
-            
+            .navigationTitle("Settings")
         }
     }
 }
@@ -37,7 +26,7 @@ struct SettingsView_Previews: PreviewProvider {
     struct Preview: View {
         @StateObject private var model = BulletinModel()
         var body: some View {
-            SettingsView(model: model)
+            SettingsTabView(model: model)
         }
     }
     

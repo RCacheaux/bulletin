@@ -23,11 +23,6 @@ struct ChoresTabView: View {
                         }) {
                             Image(systemName: "plus")
                         }
-                        Button(action: {
-                            showingSettingsSheet.toggle()
-                        }) {
-                            Image(systemName: "gearshape")
-                        }
                     }
                 }
         }
@@ -35,7 +30,7 @@ struct ChoresTabView: View {
             NewChoreView(model: model)
         }
         .sheet(isPresented: $showingSettingsSheet) {
-            SettingsView(model: model)
+            SettingsTabView(model: model)
         }
     }
 }

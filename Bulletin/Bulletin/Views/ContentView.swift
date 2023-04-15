@@ -20,6 +20,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Meals", systemImage: "takeoutbag.and.cup.and.straw")
                 }
+            SettingsTabView(model: model)
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
     }
 }

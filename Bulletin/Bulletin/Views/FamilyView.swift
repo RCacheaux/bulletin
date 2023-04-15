@@ -20,7 +20,6 @@ struct FamilyView: View {
                 }
             }
             .navigationTitle("Family")
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
