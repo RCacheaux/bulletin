@@ -24,6 +24,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
+            LoginView()
+                .tabItem {
+                    Label("Log In", systemImage: "key")
+                }
         }
     }
 }

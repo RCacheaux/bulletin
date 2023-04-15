@@ -26,6 +26,8 @@
 		9F4D924829EB2BC700E4230B /* CDChore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D924729EB2BC700E4230B /* CDChore+Extensions.swift */; };
 		9F4D924C29EB40B200E4230B /* ChoresTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D924B29EB40B200E4230B /* ChoresTabView.swift */; };
 		9F4D924E29EB435D00E4230B /* MealsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D924D29EB435D00E4230B /* MealsTabView.swift */; };
+		9F4D925029EB4BEF00E4230B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D924F29EB4BEF00E4230B /* LoginView.swift */; };
+		9F4D925229EB55AD00E4230B /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D925129EB55AD00E4230B /* KeychainItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,9 @@
 		9F4D924729EB2BC700E4230B /* CDChore+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDChore+Extensions.swift"; sourceTree = "<group>"; };
 		9F4D924B29EB40B200E4230B /* ChoresTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresTabView.swift; sourceTree = "<group>"; };
 		9F4D924D29EB435D00E4230B /* MealsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTabView.swift; sourceTree = "<group>"; };
+		9F4D924F29EB4BEF00E4230B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9F4D925129EB55AD00E4230B /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		9F4D925329EB563200E4230B /* Bulletin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bulletin.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +86,9 @@
 		9F2D00F429D90515002F9A3E /* Bulletin */ = {
 			isa = PBXGroup;
 			children = (
+				9F4D925329EB563200E4230B /* Bulletin.entitlements */,
 				9F2D00F529D90515002F9A3E /* BulletinApp.swift */,
+				9F4D925129EB55AD00E4230B /* KeychainItem.swift */,
 				9F4D924929EB3FAE00E4230B /* Views */,
 				9F4D924A29EB3FD300E4230B /* Model */,
 				9F2D00F929D90515002F9A3E /* Assets.xcassets */,
@@ -111,6 +118,7 @@
 				9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */,
 				9F2D010B29D9E8A9002F9A3E /* NewChoreView.swift */,
 				9F2D010529D91EDC002F9A3E /* ChoreRowView.swift */,
+				9F4D924F29EB4BEF00E4230B /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,10 +218,12 @@
 				9F4D920629DEFC1900E4230B /* NewFamilyMemberView.swift in Sources */,
 				9F4D920929E1AF1100E4230B /* BulletinModel.xcdatamodeld in Sources */,
 				9F2D010C29D9E8A9002F9A3E /* NewChoreView.swift in Sources */,
+				9F4D925029EB4BEF00E4230B /* LoginView.swift in Sources */,
 				9F2D00F829D90515002F9A3E /* ContentView.swift in Sources */,
 				9F4D924429E1DE2900E4230B /* FamilyMember.swift in Sources */,
 				9F2D00F629D90515002F9A3E /* BulletinApp.swift in Sources */,
 				9F4D920029DEF2DC00E4230B /* ChoreView.swift in Sources */,
+				9F4D925229EB55AD00E4230B /* KeychainItem.swift in Sources */,
 				9F2D010E29DA2D98002F9A3E /* BulletinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +350,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Bulletin/Bulletin.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bulletin/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CX9J48U7L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -355,8 +370,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rcach.Bulletin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcach.bulletin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Bulletin Provisioning";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,9 +385,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Bulletin/Bulletin.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bulletin/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CX9J48U7L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -383,8 +405,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rcach.Bulletin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcach.bulletin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Bulletin Provisioning";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
