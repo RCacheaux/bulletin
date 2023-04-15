@@ -7,6 +7,15 @@
 
 import Foundation
 
-struct FamilyMember {
+struct FamilyMember: Identifiable, Hashable {
+    let id: URL
     let name: String
+}
+
+extension FamilyMember {
+    static func preview() -> FamilyMember {
+        let id = URL(string: "coredata://app.bulletin/familyMember/preview")!
+        let name = "Preview Family Member"
+        return FamilyMember(id: id, name: name)
+    }
 }

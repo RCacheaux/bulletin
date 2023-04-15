@@ -32,7 +32,8 @@ struct NewFamilyMemberView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add"){
-                        let newFamilyMember = FamilyMember(name: name)
+                        let id = URL(string: "coredata://app.bulletin/familyMember/new")!
+                        let newFamilyMember = FamilyMember(id: id, name: name)
                         model.persist(familyMember: newFamilyMember)
                         dismiss()
                     }

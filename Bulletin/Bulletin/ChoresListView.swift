@@ -14,7 +14,8 @@ struct ChoresListView: View {
     var body: some View {
         List {
             ForEach(chores) { cdchore in
-                let chore = Chore(name: cdchore.name!)
+                let id = cdchore.objectID.uriRepresentation()
+                let chore = Chore(id: id, name: cdchore.name!, assignedTo: cdchore.asignee!.familyMember)
                 NavigationLink {
                     ChoreView(model: model, chore: chore)
                 } label: {

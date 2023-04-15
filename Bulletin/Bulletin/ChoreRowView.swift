@@ -14,6 +14,7 @@ struct ChoreRowView: View {
         HStack {
             Text(chore.name)
             Spacer()
+            Text(chore.assignedTo!.name)
         }
         .padding([.leading, .trailing])
     }
@@ -21,6 +22,6 @@ struct ChoreRowView: View {
 
 struct ChoreRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoreRowView(chore: Chore(name: "Trash"))
+        ChoreRowView(chore: Chore.preview())
     }
 }

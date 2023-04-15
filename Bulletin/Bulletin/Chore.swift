@@ -8,6 +8,16 @@
 import Foundation
 
 struct Chore: Identifiable {
-    let id = UUID()
+    let id: URL
     let name: String
+    let assignedTo: FamilyMember?
+}
+
+extension Chore {
+    static func preview() -> Chore {
+        let id = URL(string: "coredata://app.bulletin/chore/preview")!
+        let name = "Preview Chore"
+        let assignedTo = FamilyMember.preview()
+        return Chore(id: id, name: name, assignedTo: assignedTo)
+    }
 }

@@ -33,9 +33,10 @@ struct NewChoreView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add"){
-                        let newChore = Chore(name: name)
+                        let id = URL(string: "coredata://app.bulletin/chore/new")!
+                        let newChore = Chore(id: id, name: name, assignedTo: nil)
                         //model.chores.append(newChore)
-                        model.persist(chore: newChore)
+                        model.persist(newChore: newChore)
                         dismiss()
                     }
                 }
