@@ -78,22 +78,10 @@
 			isa = PBXGroup;
 			children = (
 				9F2D00F529D90515002F9A3E /* BulletinApp.swift */,
-				9F2D00F729D90515002F9A3E /* ContentView.swift */,
-				9F4D920729E1AF1100E4230B /* BulletinModel.xcdatamodeld */,
-				9F4D920529DEFC1900E4230B /* NewFamilyMemberView.swift */,
-				9F4D924329E1DE2900E4230B /* FamilyMember.swift */,
-				9F4D920129DEF8F500E4230B /* SettingsView.swift */,
-				9F4D920329DEFA8600E4230B /* FamilyView.swift */,
-				9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */,
-				9F2D010B29D9E8A9002F9A3E /* NewChoreView.swift */,
+				9F4D924929EB3FAE00E4230B /* Views */,
+				9F4D924A29EB3FD300E4230B /* Model */,
 				9F2D00F929D90515002F9A3E /* Assets.xcassets */,
 				9F2D00FB29D90515002F9A3E /* Preview Content */,
-				9F2D010329D91DD3002F9A3E /* ChoresListView.swift */,
-				9F2D010D29DA2D98002F9A3E /* BulletinModel.swift */,
-				9F4D924529EB2B5800E4230B /* CDFamilyMember+Extensions.swift */,
-				9F4D924729EB2BC700E4230B /* CDChore+Extensions.swift */,
-				9F2D010529D91EDC002F9A3E /* ChoreRowView.swift */,
-				9F2D010729D91F9C002F9A3E /* Chore.swift */,
 			);
 			path = Bulletin;
 			sourceTree = "<group>";
@@ -104,6 +92,34 @@
 				9F2D00FC29D90515002F9A3E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F4D924929EB3FAE00E4230B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F2D010329D91DD3002F9A3E /* ChoresListView.swift */,
+				9F2D00F729D90515002F9A3E /* ContentView.swift */,
+				9F4D920129DEF8F500E4230B /* SettingsView.swift */,
+				9F4D920329DEFA8600E4230B /* FamilyView.swift */,
+				9F4D920529DEFC1900E4230B /* NewFamilyMemberView.swift */,
+				9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */,
+				9F2D010B29D9E8A9002F9A3E /* NewChoreView.swift */,
+				9F2D010529D91EDC002F9A3E /* ChoreRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F4D924A29EB3FD300E4230B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F4D920729E1AF1100E4230B /* BulletinModel.xcdatamodeld */,
+				9F2D010D29DA2D98002F9A3E /* BulletinModel.swift */,
+				9F4D924329E1DE2900E4230B /* FamilyMember.swift */,
+				9F4D924529EB2B5800E4230B /* CDFamilyMember+Extensions.swift */,
+				9F4D924729EB2BC700E4230B /* CDChore+Extensions.swift */,
+				9F2D010729D91F9C002F9A3E /* Chore.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
