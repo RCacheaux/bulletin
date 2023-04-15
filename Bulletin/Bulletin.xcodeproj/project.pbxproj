@@ -101,16 +101,16 @@
 		9F4D924929EB3FAE00E4230B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9F2D010329D91DD3002F9A3E /* ChoresListView.swift */,
 				9F2D00F729D90515002F9A3E /* ContentView.swift */,
+				9F4D924B29EB40B200E4230B /* ChoresTabView.swift */,
+				9F4D924D29EB435D00E4230B /* MealsTabView.swift */,
 				9F4D920129DEF8F500E4230B /* SettingsTabView.swift */,
+				9F2D010329D91DD3002F9A3E /* ChoresListView.swift */,
 				9F4D920329DEFA8600E4230B /* FamilyView.swift */,
 				9F4D920529DEFC1900E4230B /* NewFamilyMemberView.swift */,
 				9F4D91FF29DEF2DC00E4230B /* ChoreView.swift */,
 				9F2D010B29D9E8A9002F9A3E /* NewChoreView.swift */,
 				9F2D010529D91EDC002F9A3E /* ChoreRowView.swift */,
-				9F4D924B29EB40B200E4230B /* ChoresTabView.swift */,
-				9F4D924D29EB435D00E4230B /* MealsTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
