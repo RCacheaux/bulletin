@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct MealsTabView: View {
-    var body: some View {
+public struct MealsTabView: View {
+    public init() {}
+    
+    public var body: some View {
         NavigationStack {
             Text("Meals View")
                 .navigationTitle("Meals")

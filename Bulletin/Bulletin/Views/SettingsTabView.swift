@@ -9,7 +9,6 @@ import SwiftUI
 import FamilyMembers
 
 struct SettingsTabView: View {
-    @ObservedObject var model: BulletinModel
     
     var body: some View {
         NavigationStack {
@@ -25,9 +24,8 @@ struct SettingsTabView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     struct Preview: View {
-        @StateObject private var model = BulletinModel()
         var body: some View {
-            SettingsTabView(model: model)
+            SettingsTabView()
         }
     }
     

@@ -7,13 +7,14 @@
 
 import SwiftUI
 import Chores
+import Meals
 
 struct ContentView: View {
-    @ObservedObject var model: BulletinModel
+    @ObservedObject var model: ChoresModel
     
     var body: some View {
         TabView {
-            ChoresTabView(model: model.choresModel)
+            ChoresTabView(model: model)
                 .tabItem {
                     Label("Chores", systemImage: "list.bullet.clipboard")   
                 }
@@ -21,7 +22,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Meals", systemImage: "takeoutbag.and.cup.and.straw")
                 }
-            SettingsTabView(model: model)
+            SettingsTabView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
@@ -35,7 +36,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     struct Preview: View {
-        @StateObject private var model = BulletinModel()
+        @StateObject private var model = ChoresModel()
         var body: some View {
             ContentView(model: model)
         }
