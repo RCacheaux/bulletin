@@ -65,6 +65,7 @@ public class ChoresModel: ObservableObject {
             let result = try moc.fetch(choreFetch)
             if result.count > 0 {
                 let managedObject = result[0]
+                managedObject.name = chore.name
                 managedObject.assigneeId = chore.assigneeId
                 try? moc.save()
                 self.chores = getAllChores()
