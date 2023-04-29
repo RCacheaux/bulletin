@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NewFamilyMemberView: View {
-    @ObservedObject var model: BulletinModel
+    @ObservedObject var model: FamilyMembersModel
     @Environment(\.dismiss) var dismiss
     @State private var name = ""
     
@@ -32,8 +32,8 @@ struct NewFamilyMemberView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add"){
-                        let id = URL(string: "coredata://app.bulletin/familyMember/new")!
-                        let newFamilyMember = FamilyMember(id: id, name: name)
+                        let newFamilyMember = FamilyMember(id: UUID(),
+                                                           name: name)
                         model.persist(familyMember: newFamilyMember)
                         dismiss()
                     }
@@ -45,7 +45,7 @@ struct NewFamilyMemberView: View {
 
 struct NewFamilyMemberView_Previews: PreviewProvider {
     struct Preview: View {
-        @StateObject private var model = BulletinModel()
+        @StateObject private var model = FamilyMembersModel()
         var body: some View {
             NewFamilyMemberView(model: model)
         }

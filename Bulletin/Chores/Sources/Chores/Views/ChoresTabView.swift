@@ -6,15 +6,22 @@
 //
 
 import SwiftUI
+import FamilyMembers
 
-struct ChoresTabView: View {
-    @ObservedObject var model: BulletinModel
+public struct ChoresTabView: View {
+    @ObservedObject var model: ChoresModel
     @State private var showingNewChoreSheet = false
-    @State private var showingSettingsSheet = false
     
-    var body: some View {
+    public init(model: ChoresModel, showingNewChoreSheet: Bool = false) {
+        self.model = model
+        self.showingNewChoreSheet = showingNewChoreSheet
+    }
+    
+    public var body: some View {
         NavigationStack {
-            ChoresListView(model: model)
+            ChoresListView(model: model,
+                           chores: model.getAllChores(),
+                           familyMembers: model.getAllFamilyMembers())
                 .navigationTitle("Chores")
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -29,15 +36,12 @@ struct ChoresTabView: View {
         .sheet(isPresented: $showingNewChoreSheet) {
             NewChoreView(model: model)
         }
-        .sheet(isPresented: $showingSettingsSheet) {
-            SettingsTabView(model: model)
-        }
     }
 }
 
 struct ChoresTabView_Previews: PreviewProvider {
     struct Preview: View {
-        @StateObject private var model = BulletinModel()
+        @StateObject private var model = ChoresModel()
         var body: some View {
             ChoresTabView(model: model)
         }

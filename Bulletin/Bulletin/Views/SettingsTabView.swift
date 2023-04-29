@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FamilyMembers
 
 struct SettingsTabView: View {
     @ObservedObject var model: BulletinModel
@@ -14,7 +15,7 @@ struct SettingsTabView: View {
         NavigationStack {
             List {
                 NavigationLink("Family") {
-                    FamilyView(model: model)
+                    FamilyView()
                 }
             }
             .navigationTitle("Settings")

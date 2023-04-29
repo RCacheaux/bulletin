@@ -6,27 +6,21 @@
 //
 
 import SwiftUI
+import FamilyMembers
 
 struct ChoreView: View {
-    @ObservedObject var model: BulletinModel
+    @ObservedObject var model: ChoresModel
     @State private var chore: Chore
     @State private var name: String
-    @State private var assignedTo: FamilyMember
-    @FetchRequest var cdFamilyMembers: FetchedResults<CDFamilyMember>
+    @State private var assignee: FamilyMember?
+    private var familyMembers: [FamilyMember]
     
-    var familyMembers: [FamilyMember] {
-        return cdFamilyMembers.map { familyMember in
-            let memberID = familyMember.objectID.uriRepresentation()
-            return FamilyMember(id: memberID, name: familyMember.name!)
-        }
-    }
-    
-    init(model: BulletinModel, chore: Chore) {
-        _cdFamilyMembers = FetchRequest<CDFamilyMember>(sortDescriptors: [])
+    init(model: ChoresModel, chore: Chore, familyMembers: [FamilyMember]) {
         _chore = State(initialValue: chore)
         _name = State(initialValue: chore.name)
-        _assignedTo = State(initialValue: chore.assignedTo!)
+        _assignee = State(initialValue: model.assigneeFor(chore))
         self.model = model
+        self.familyMembers = familyMembers
     }
     
     var body: some View {
@@ -39,13 +33,14 @@ struct ChoreView: View {
                     )
                 }
                 Section {
-                    Picker("Assign To", selection: $assignedTo) {
+                    Picker("Assign To", selection: $assignee) {
+                        Text("(Unassigned)").tag(nil as FamilyMember?)
                         ForEach(familyMembers) { member in
-                            Text(member.name).tag(member)
+                            Text(member.name).tag(member as FamilyMember?)
                         }
-                    }.onChange(of: assignedTo) { familyMember in
-                        let chore = Chore(id: chore.id, name: chore.name, assignedTo: familyMember)
-                        model.persist(chore: chore)
+                    }.onChange(of: assignee) { familyMember in
+                        let chore = Chore(id: chore.id, name: chore.name, assigneeId: assignee?.id)
+                        model.persist(chore)
                     }
                 }
             }
@@ -57,11 +52,14 @@ struct ChoreView: View {
 
 struct ChoreView_Previews: PreviewProvider {
     struct Preview: View {
-        @StateObject private var model = BulletinModel()
+        @StateObject private var model = ChoresModel()
 
         var body: some View {
+            let familyMembers = FamilyMember.previewFamilyMembers()
+            let assignee = familyMembers.first!
             ChoreView(model: model,
-                      chore: Chore.preview())
+                      chore: Chore.preview(assigneeId: assignee.id),
+                      familyMembers: familyMembers)
         }
     }
     

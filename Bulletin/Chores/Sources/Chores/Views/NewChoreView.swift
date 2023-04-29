@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NewChoreView: View {
-    @ObservedObject var model: BulletinModel
+    @ObservedObject var model: ChoresModel
     @Environment(\.dismiss) var dismiss
     @State private var name = ""
     
@@ -33,10 +33,11 @@ struct NewChoreView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add"){
-                        let id = URL(string: "coredata://app.bulletin/chore/new")!
-                        let newChore = Chore(id: id, name: name, assignedTo: nil)
+                        let newChore = Chore(id: UUID(),
+                                             name: name,
+                                             assigneeId: nil)
                         //model.chores.append(newChore)
-                        model.persist(newChore: newChore)
+                        model.persist(newChore)
                         dismiss()
                     }
                 }
@@ -49,7 +50,7 @@ struct NewChoreView: View {
 
 struct NewChoreView_Previews: PreviewProvider {
     struct Preview: View {
-        @StateObject private var model = BulletinModel()
+        @StateObject private var model = ChoresModel()
 
         var body: some View {
             NewChoreView(model: model)

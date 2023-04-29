@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import Chores
 
 struct ContentView: View {
     @ObservedObject var model: BulletinModel
     
     var body: some View {
         TabView {
-            ChoresTabView(model: model)
+            ChoresTabView(model: model.choresModel)
                 .tabItem {
                     Label("Chores", systemImage: "list.bullet.clipboard")   
                 }
