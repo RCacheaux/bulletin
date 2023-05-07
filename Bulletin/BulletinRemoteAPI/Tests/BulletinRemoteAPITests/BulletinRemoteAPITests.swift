@@ -1,11 +1,11 @@
 import XCTest
-@testable import Chores
+@testable import BulletinRemoteAPI
 
-final class ChoresTests: XCTestCase {
+final class BulletinRemoteAPITests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        //XCTAssertEqual(Chores().text, "Hello, World!")
+        //XCTAssertEqual(BulletinRemoteAPI().text, "Hello, World!")
     }
 }

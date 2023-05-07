@@ -18,6 +18,7 @@
 		9F4D925029EB4BEF00E4230B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D924F29EB4BEF00E4230B /* LoginView.swift */; };
 		9F4D925229EB55AD00E4230B /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D925129EB55AD00E4230B /* KeychainItem.swift */; };
 		9F4D925929FC65CE00E4230B /* Chores in Frameworks */ = {isa = PBXBuildFile; productRef = 9F4D925829FC65CE00E4230B /* Chores */; };
+		9FE533F62A0714890036CFAA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE533F52A0714890036CFAA /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		9F4D925329EB563200E4230B /* Bulletin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bulletin.entitlements; sourceTree = "<group>"; };
 		9F4D925429FC64C300E4230B /* Chores */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Chores; sourceTree = "<group>"; };
 		9F4D926929FC8DB400E4230B /* FamilyMembers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FamilyMembers; sourceTree = "<group>"; };
+		9FE533F42A05D3BB0036CFAA /* BulletinRemoteAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BulletinRemoteAPI; sourceTree = "<group>"; };
+		9FE533F52A0714890036CFAA /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,7 @@
 				9F4D925429FC64C300E4230B /* Chores */,
 				9F44A28429FDCCF900B0A3CE /* Meals */,
 				9F4D926929FC8DB400E4230B /* FamilyMembers */,
+				9FE533F42A05D3BB0036CFAA /* BulletinRemoteAPI */,
 				9F2D00F329D90515002F9A3E /* Products */,
 				9F4D925729FC65CE00E4230B /* Frameworks */,
 			);
@@ -93,9 +97,9 @@
 		9F2D00F429D90515002F9A3E /* Bulletin */ = {
 			isa = PBXGroup;
 			children = (
-				9F4D926129FC8B1700E4230B /* Chores */,
 				9F4D925329EB563200E4230B /* Bulletin.entitlements */,
 				9F2D00F529D90515002F9A3E /* BulletinApp.swift */,
+				9FE533F52A0714890036CFAA /* AppState.swift */,
 				9F4D924929EB3FAE00E4230B /* Views */,
 				9F4D924A29EB3FD300E4230B /* Model */,
 				9F2D00F929D90515002F9A3E /* Assets.xcassets */,
@@ -143,13 +147,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9F4D926129FC8B1700E4230B /* Chores */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Chores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +257,7 @@
 				9F4D920229DEF8F500E4230B /* SettingsTabView.swift in Sources */,
 				9F4D925029EB4BEF00E4230B /* LoginView.swift in Sources */,
 				9F2D00F829D90515002F9A3E /* ContentView.swift in Sources */,
+				9FE533F62A0714890036CFAA /* AppState.swift in Sources */,
 				9F2D00F629D90515002F9A3E /* BulletinApp.swift in Sources */,
 				9F4D925229EB55AD00E4230B /* KeychainItem.swift in Sources */,
 			);

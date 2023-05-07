@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct NewFamilyMemberView: View {
-    @ObservedObject var model: FamilyMembersModel
+struct _NewFamilyMemberView: View {
     @Environment(\.dismiss) var dismiss
     @State private var name = ""
+    let CreateFamilyMemberUseCase: (FamilyMember) -> CreateNewFamilyMemberUseCase
     
     var body: some View {
         NavigationView {
@@ -32,9 +32,9 @@ struct NewFamilyMemberView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add"){
-                        let newFamilyMember = FamilyMember(id: UUID(),
+                        let newFamilyMember = FamilyMember(id: 1,
                                                            name: name)
-                        model.persist(familyMember: newFamilyMember)
+                        CreateFamilyMemberUseCase(newFamilyMember).run()
                         dismiss()
                     }
                 }
@@ -45,9 +45,15 @@ struct NewFamilyMemberView: View {
 
 struct NewFamilyMemberView_Previews: PreviewProvider {
     struct Preview: View {
-        @StateObject private var model = FamilyMembersModel()
+        let dc: FamilyMembersDependencyContainer
+        
+        @MainActor
+        init() {
+            self.dc = FamilyMembersDependencyContainer()
+        }
+        
         var body: some View {
-            NewFamilyMemberView(model: model)
+            dc.newFamilyMemberView()
         }
     }
     

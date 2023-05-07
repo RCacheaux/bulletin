@@ -33,7 +33,7 @@ struct NewChoreView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add"){
-                        let newChore = Chore(id: UUID(),
+                        let newChore = Chore(id: 1,
                                              name: name,
                                              assigneeId: nil)
                         //model.chores.append(newChore)

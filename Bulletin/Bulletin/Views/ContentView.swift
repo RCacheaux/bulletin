@@ -10,39 +10,45 @@ import Chores
 import Meals
 
 struct ContentView: View {
-    @ObservedObject var model: ChoresModel
+    @StateObject var appState: AppState = AppState()
     
     var body: some View {
-        TabView {
-            ChoresTabView(model: model)
-                .tabItem {
-                    Label("Chores", systemImage: "list.bullet.clipboard")   
-                }
-            MealsTabView()
-                .tabItem {
-                    Label("Meals", systemImage: "takeoutbag.and.cup.and.straw")
-                }
-            SettingsTabView()
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
-            LoginView()
-                .tabItem {
-                    Label("Log In", systemImage: "key")
-                }
+        switch appState.loadingState {
+        case .loading:
+            Text("Loading...")
+            
+        case .loaded:
+            TabView {
+//                ChoresTabView(model: model)
+//                    .tabItem {
+//                        Label("Chores", systemImage: "list.bullet.clipboard")
+//                    }
+                MealsTabView()
+                    .tabItem {
+                        Label("Meals", systemImage: "takeoutbag.and.cup.and.straw")
+                    }
+                SettingsTabView(dc: appState.dc)
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+                LoginView()
+                    .tabItem {
+                        Label("Log In", systemImage: "key")
+                    }
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     struct Preview: View {
-        @StateObject private var model = ChoresModel()
         var body: some View {
-            ContentView(model: model)
+            ContentView()
         }
     }
     
     static var previews: some View {
         Preview()
+        
     }
 }

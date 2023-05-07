@@ -9,14 +9,14 @@ import Foundation
 import FamilyMembers
 
 struct Chore: Identifiable {
-    let id: UUID
+    let id: Int
     let name: String
-    let assigneeId: UUID?
+    let assigneeId: Int?
 }
 
 extension Chore {
-    static func preview(assigneeId: UUID) -> Chore {
-        let id = UUID()
+    static func preview(assigneeId: Int) -> Chore {
+        let id = 1
         let name = "Preview Chore"
         let assigneeId = assigneeId
         return Chore(id: id, name: name, assigneeId: assigneeId)
@@ -25,9 +25,9 @@ extension Chore {
     static func previewList() -> [Chore] {
         let familyMembers = FamilyMember.previewFamilyMembers()
         return [
-            Chore(id: UUID(), name: "Trash", assigneeId: familyMembers.randomElement()!.id),
-            Chore(id: UUID(), name: "Dishes", assigneeId: familyMembers.randomElement()!.id),
-            Chore(id: UUID(), name: "School Pickup", assigneeId: familyMembers.randomElement()!.id)
+            Chore(id: 1, name: "Trash", assigneeId: familyMembers.randomElement()!.id),
+            Chore(id: 2, name: "Dishes", assigneeId: familyMembers.randomElement()!.id),
+            Chore(id: 3, name: "School Pickup", assigneeId: familyMembers.randomElement()!.id)
         ]
     }
 }

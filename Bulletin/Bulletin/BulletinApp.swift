@@ -8,13 +8,15 @@
 import SwiftUI
 import AuthenticationServices
 import Chores
+import FamilyMembers
+
+
 
 
 @main
 struct BulletinApp: App {
-    @StateObject private var model = ChoresModel()
-    
     init() {
+        //let model = ChoresModel(familyMembersState: familyMembersDependencyContainer.state)
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         appleIDProvider.getCredentialState(forUserID: KeychainItem.currentUserIdentifier) { (credentialState, error) in
             switch credentialState {
@@ -32,7 +34,7 @@ struct BulletinApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(model: model)
+            ContentView()
         }
     }
 }

@@ -8,7 +8,9 @@
 import SwiftUI
 import FamilyMembers
 
+@MainActor
 struct SettingsTabView: View {
+    let dc: FamilyMembersDependencyContainer
     
     var body: some View {
         NavigationStack {
@@ -20,12 +22,16 @@ struct SettingsTabView: View {
             .navigationTitle("Settings")
         }
     }
+
+    func FamilyView() -> some View {
+        return dc.familyView()
+    }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     struct Preview: View {
         var body: some View {
-            SettingsTabView()
+            SettingsTabView(dc: FamilyMembersDependencyContainer())
         }
     }
     

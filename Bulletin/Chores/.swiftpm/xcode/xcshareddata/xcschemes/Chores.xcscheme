@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9F2D00F129D90515002F9A3E"
-               BuildableName = "Bulletin.app"
-               BlueprintName = "Bulletin"
-               ReferencedContainer = "container:Bulletin.xcodeproj">
+               BlueprintIdentifier = "Chores"
+               BuildableName = "Chores"
+               BlueprintName = "Chores"
+               ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,19 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9F44A27A29FDCB5000B0A3CE"
-               BuildableName = "BulletinTests.xctest"
-               BlueprintName = "BulletinTests"
-               ReferencedContainer = "container:Bulletin.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -52,16 +39,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9F2D00F129D90515002F9A3E"
-            BuildableName = "Bulletin.app"
-            BlueprintName = "Bulletin"
-            ReferencedContainer = "container:Bulletin.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -69,16 +46,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9F2D00F129D90515002F9A3E"
-            BuildableName = "Bulletin.app"
-            BlueprintName = "Bulletin"
-            ReferencedContainer = "container:Bulletin.xcodeproj">
+            BlueprintIdentifier = "Chores"
+            BuildableName = "Chores"
+            BlueprintName = "Chores"
+            ReferencedContainer = "container:">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
